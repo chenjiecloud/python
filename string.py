@@ -3,6 +3,29 @@
 # 字符串操作
 # 特性：不可修改
 
+# * 重复输出字符串
+print('hello' * 10)
+
+# [:] 通过索引获取字符串中字符
+str = 'helloworld'
+print(str[2:])
+
+# in 判断 成员运算符 如果包含，返回True
+print('ell' in str)
+
+# % 格式化字符串
+print('你好%s' % '世界')
+
+# + 字符串拼接
+
+# 消耗性能
+a = '您好'
+b = '世界'
+print(a + b)
+
+# 使用 join 函数
+print('>>>>'.join([a, b]))
+
 name = 'My name is Amy'
 
 print(name.capitalize())    # 首字母大写
