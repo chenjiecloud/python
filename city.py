@@ -19,7 +19,7 @@ menu = {
         },
         '昌平':{
             '沙河':{
-                '老男孩':{},
+                '男孩':{},
                 '北航':{},
             },
             '天通苑':{},
@@ -44,25 +44,15 @@ menu = {
     '山东':{},
 }
 
-start = False
 current_layer = menu
-layers = [menu]
+parent_menu = [menu]
 
-while not start:
-    for i in current_layer:
-        print(i)
-    choice = input('>>>：').strip()
+while True:
+    for key in current_layer:
+        print(key)
+    choice = input('>>>[返回上一级为b]：')
+    
 
-    if choice == 'b':
-        current_layer = layers[-1]
-        layers.pop()
-
-    elif choice not in current_layer:
-        continue
-
-    else:
-        layers.append(current_layer)
-        current_layer = current_layer[choice]
 
 
 
