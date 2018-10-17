@@ -24,11 +24,10 @@
 #     }
 # }
 
-entry = input('>>>：')
+f = open('./src/haproxy.cfg', 'r+', encoding='utf-8')
+f.write('是')
+data = f.read()
+print(data + '\n')
 
-if entry == 'www.oldboy.org':
-    f = open('./src/haproxy.cfg', 'r+', encoding='utf-8')
-    data = f.read()
-    print(data)
-else:
-    print('输入错误')
+
+f.close()
