@@ -52,3 +52,5 @@ print(msg.format(name = 'Amy', age = 550))  # my name is Amy, and age is 550
 print(msg.format_map({'name': 'ajax','age': 22}))   # my name is ajax, and age is 22
 
 
+# %s 字符串
+# %d 有符号整数(十进制)
