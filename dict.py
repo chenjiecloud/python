@@ -89,8 +89,3 @@ for i in area1:
 # 会先把dict转成list，数据大时不要用，消耗性能
 for i, v in area1.items():
     print(i, v)
-
-
-
-
-
