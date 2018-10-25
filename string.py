@@ -37,6 +37,11 @@ print(name.startswith('M')) # 判断字符串是否以 M 开头
 print(name.endswith('M'))   # 判断字符串是否以 M 结尾
 print('Bob\tAnda'.expandtabs(10)) # 输出 'Bob       Anda'，将\t转换成多长的空格
 print(name.find('A'))       # 查找A, 找到返回其索引， 找不到返回-1
+print(name.lower())     # 全部小写
+print(name.upper())     # 全部大写
+print('\t\t\t\t你好\t\t\t'.strip())   # 去掉前后的空格
+print(name.replace('Amy', 'Bob', 1)) # 替换，后面的1表示替换几次
+print(name.split(' '))  # 切割
 
 # format:
 msg = 'my name is {}, and age is {}'
@@ -51,6 +56,3 @@ print(msg.format(name = 'Amy', age = 550))  # my name is Amy, and age is 550
 # format_map:
 print(msg.format_map({'name': 'ajax','age': 22}))   # my name is ajax, and age is 22
 
-
-# %s 字符串
-# %d 有符号整数(十进制)

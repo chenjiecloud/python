@@ -61,3 +61,9 @@
 # py2.7以后，可以支持对多个文件的上下文进行管理
 # with open('txt.txt') as obj1, open('txt2.txt') as obj2:
 
+# flush 将内存里是文件清空到硬盘里
+# tell 获取光标的位置
+# seek 指定光标的位置
+# truncate() 截断，默认从光标默认位置截取 a 模式：不会清空内容， w 模式：会清空，然后在截取
+
+
