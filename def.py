@@ -3,7 +3,7 @@
 # 函数的作用
 # 1.减少重复代码
 # 2.方便修改,更易扩展
-# 3.保持代码的一致性
+# 3.保持代码的一致性`-
 
 # define 定义
 
@@ -71,6 +71,19 @@ stu_register("Jack",32,"CN","Python",sex="Male",province="ShanDong")
 # 输出
 # Jack 32 ('CN', 'Python') {'province': 'ShanDong', 'sex': 'Male'}
 
+# 注意，还可以这样传参
+def f2(*args):
+    print(args)
+f2([1, 2, 3])   #（[1, 2, 3]）
+f2(*[1, 2, 3])  # (1, 2, 3)
+
+def f3(**kwargs):
+    print(kwargs)
+
+f3(**{'namae': 'cj', 'age': 18})    # {'namae': 'cj', 'age': 18}
+f3(name = 'jiali', age = 17)    # {'name': 'jiali', 'age': 17}
+
+
 
 # 局部变量
 name = "Alex Li"
@@ -89,6 +102,9 @@ print("在外面看看name改了么?", name)
 # before change: Alex Li
 # after change 金角大王,一个有Tesla的男人
 # 在外面看看name改了么? Alex Li
+
+# 作用域
+# 函数， 类， 模块
 
 # 全局与局部变量
 # 在子程序中定义的变量称为局部变量，在程序的一开始定义的变量称为全局变量。
@@ -110,4 +126,43 @@ print("在外面看看name改了么?", name)
 # 注意点
 # 函数里如果没有return，会默认返回一个None
 # 如果return多个对象，那么python会帮我们多个对象封装成一个元祖
+
+# 高阶函数：
+def f4(x , y, func):
+    return func(x) + func(y)
+
+def f5(n):
+    return n * n
+
+# 执行了两次f4函数， 所以 1 * 1 + 2 * 2
+print(f4(1, 2, f5))
+
+# 1.函数名可以进行赋值
+# 2.函数名可以作为函数参数，还可以作为函数的返回值
+
+def f6():
+    def f7():
+        return 8
+
+    return f7
+
+ret = f6()
+print(ret)   # <function f6.<locals>.f7 at 0x103109d90>
+print(ret()) # 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
