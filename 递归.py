@@ -39,3 +39,46 @@ def feibo(n):
 
 print(feibo(8))
 
+
+# 内置函数
+# http://www.cnblogs.com/yuanchenqi/articles/5828233.html
+
+# 重要内置函数
+
+str = ['a', 'b', 'c', 'd']
+
+# filter 过滤
+
+def fun1(s):
+    if s != 'a':
+        return s
+
+ret =  filter(fun1, str)
+
+print(ret)   # <filter object at 0x10e2586a0> ret是一个迭代器对象
+print(list(ret))    # ['b', 'c', 'd']
+
+# map
+def fun2(s):
+    return s + 'hello'
+
+ret = map(fun2, str)
+
+print(ret)       # <map object at 0x108ec0d30>
+print(list(ret))    # ['ahello', 'bhello', 'chello', 'dhello']
+
+# reduce
+
+from functools import reduce
+
+def add1(x, y):
+    return x + y
+
+print(reduce(add1, range(1 ,101)))  # 5050 reduce 的结果就是一个值
+
+# lambda（匿名函数）
+lambda a, b : a + b
+
+print(reduce(lambda x, y : x * y, range(1, 9)))
+
+
