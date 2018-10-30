@@ -57,3 +57,61 @@ def foo():
     time.sleep(2)
 
 foo()
+
+
+# 功能函数加参数
+def show_spend_time(func):
+    def inners(*args, **kwargs):
+        start = time.time()
+        func(*args, **kwargs)
+        end = time.time()
+        print('spend: %s' % (end - start))
+    return inners
+
+
+@show_spend_time
+def add(*args, **kwargs):
+    num = 0
+    for i in args:
+        num += i
+    print(num)
+
+
+add(1, 2, 3, 4, 4)
+
+
+
+
+# 装饰器参数
+def logger(flag = ''):
+    def show_spend_time(func):
+        def inners(*args, **kwargs):
+            start = time.time()
+            func(*args, **kwargs)
+            end = time.time()
+            print('spend: %s' % (end - start))
+            if flag == 'true':
+                print('日志记录了')
+        return inners
+    return show_spend_time
+
+@logger('true')
+def add(*args, **kwargs):
+    num = 0
+    for i in args:
+        num += i
+    print(num)
+
+
+@logger()
+def add1(*args, **kwargs):
+    num = 0
+    for i in args:
+        num += i
+    print(num)
+    print('没有记录')
+
+add(1, 2, 3, 4, 4)
+add1(1, 2)
+
+
