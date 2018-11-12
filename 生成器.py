@@ -11,3 +11,4 @@ def func(n):
 b = [func(x) for x in range(10)]
 
 print(b)
+
