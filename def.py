@@ -151,18 +151,3 @@ print(ret)   # <function f6.<locals>.f7 at 0x103109d90>
 print(ret()) # 8
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

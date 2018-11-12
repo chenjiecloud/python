@@ -10,8 +10,6 @@ def func(n):
 
 b = [func(x) for x in range(10)]
 
-print(b)
-
 print(type(b))    # <class 'list'>
 
 # 生成器
