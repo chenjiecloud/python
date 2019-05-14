@@ -16,3 +16,5 @@ print(iter(list))       # <list_iterator object at 0x105361550>
 # 1. 调用可迭代对象的iter方法返回一个迭代器对象
 # 2. 不断调用迭代器对象的next方法
 # 3. 处理StopIteration异常
+
+# test2
